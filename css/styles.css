@@ -181,7 +181,11 @@ a {
 
 .cards {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
+=======
+  object-fit: fill;
+>>>>>>> e8add23a78725d0df39a48d3940df62f538ce382
   font-family: "Epilogue", sans-serif;
   font-weight: 600;
   margin: 0 1rem;
@@ -222,7 +226,7 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: white; 
   background: linear-gradient(
     to bottom,
     transparent 0,
