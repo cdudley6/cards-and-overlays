@@ -181,25 +181,24 @@ a {
 
 .cards {
   display: flex;
-  object-fit: cover;
+  flex-direction: column;
   font-family: "Epilogue", sans-serif;
   font-weight: 600;
+  margin: 0 1rem;
+  gap: 1rem;
 }
 
 .card {
-  flex: 1 1 0;
+  flex: 1 1 45%;
   object-fit: cover;
-  margin-left: 1rem;
   position:relative;
+  margin-bottom: 3rem;
+  /* aspect-ratio: 1/1; */
 }
 
-.card:first-child {
-  margin-left: 0;
-}
 
 .card .image-wrapper::after {
   content: "";
-  display:flex;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -211,6 +210,11 @@ a {
 
 .card:hover .image-wrapper::after {
   background-color: transparent;
+}
+
+.card img {
+  height: 100%;
+  
 }
 
 .card .text-wrapper {
@@ -226,27 +230,6 @@ a {
   );
   padding: 3rem .5rem .75rem;
 }
-
-
-
-  .card {
-    flex: 40%;
-    margin-bottom: 0rem;
-  }
-
-  .card:nth-of-type(3) {
-    margin-left: 0;
-  }
-
-
-
-  
-  .card {
-    margin: 0 0 1rem;
-  }
-
-
-
 
 .button {
   cursor: pointer;
@@ -264,4 +247,18 @@ a {
 .button:hover{
   color: #A5D1E7;
   background-color: var(--button-color);
+}
+
+@media (min-width: 570px) {
+  .cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  }
+}
+
+@media (min-width: 800px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
 }
